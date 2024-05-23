@@ -19,6 +19,7 @@
 
 .page.theme_light {
   --accent-background-image: url(../images/cover-image-light.png);
+  --accent-background-color:#FFF1F7;
 }
 
 @media (prefers-color-scheme: light) {
@@ -37,6 +38,7 @@
   }
 
   .page {
+    --accent-background-color:#FFF1F7;
     --accent-background-image: url(../images/cover-image-light.png);
   }
 }
