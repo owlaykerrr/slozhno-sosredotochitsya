@@ -4,28 +4,24 @@
   переключая тему
 */
 
-
-
 :root .theme_dark {
-  --accent-color:#000028;
-    --bg-color: #FF0070;
-    --title-color: #DB00FF;
-    --container-title-color: #FF0070;
-    --button-hover-color: rgba(255, 0, 112, 0.4);;
-    --container-info-color: #F1B2CE;
-} 
+  --accent-color: #000028;
+  --bg-color: #ff0070;
+  --title-color: #db00ff;
+  --container-title-color: #ff0070;
+  --button-hover-color: rgba(255, 0, 112, 0.4);
+  --container-info-color: #f1b2ce;
+}
 
-
-.theme_dark .header_rec  {
+.theme_dark .header_rec {
   display: block;
 }
-  
+
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-    
-    --accent-background-image: url(../images/cover-image-dark.png);
 
+  --accent-background-image: url(../images/cover-image-dark.png);
 }
