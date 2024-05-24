@@ -11,6 +11,7 @@
   --container-info-color: #353430;
   --container-title-color: #353430;
   --button-hover-color: rgba(50, 49, 45, 0.4);
+  --main-font: "IBM Plex Mono", sans-serif;
 }
 
 .theme_light .header_rec {
@@ -19,7 +20,7 @@
 
 .page.theme_light {
   --accent-background-image: url(../images/cover-image-light.png);
-  --accent-background-color:#FFF1F7;
+  --accent-background-color: #fff1f7;
 }
 
 @media (prefers-color-scheme: light) {
@@ -31,6 +32,7 @@
     --container-title-color: #353430;
     --accent-background-image: url(../images/cover-image-light.png);
     --button-hover-color: rgba(50, 49, 45, 0.4);
+    --main-font: "IBM Plex Mono", sans-serif;
   }
 
   .header_rec {
@@ -38,7 +40,7 @@
   }
 
   .page {
-    --accent-background-color:#FFF1F7;
+    --accent-background-color: #fff1f7;
     --accent-background-image: url(../images/cover-image-light.png);
   }
 }

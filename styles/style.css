@@ -15,7 +15,7 @@
   position: relative;
   display: grid;
   block-size: 100vh;
-  min-block-size: 727px;
+  min-block-size: 728px;
   grid-template-rows: 1fr min-content 1fr;
 }
 
@@ -27,7 +27,7 @@
 .header_rec::before {
   content: "REC";
   color: var(--bg-color);
-  font-family: IBM Plex Mono;
+  font-family: var(--main-font);
   font-size: 18px;
   line-height: 25px;
 }
@@ -77,13 +77,14 @@
   background-color: transparent;
   border: none;
   color: var(--container-title-color);
-  font-family: IBM Plex Mono;
+  font-family: var(--main-font);
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
   text-align: center;
   text-transform: lowercase;
   padding: 1px 7px;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
@@ -105,25 +106,22 @@
   outline-offset: 2px;
 }
 
-.header_heading {
-  margin-inline-start: -20px;
-  margin-block-end: 35px;
-}
-
 .header-title {
   color: var(--title-color);
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--main-font);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 82.5%;
   letter-spacing: 0px;
   font-weight: bold;
   text-shadow: 4px 4px 0 var(--bg-color);
+  margin-inline-start: -20px;
+  margin-block-end: 35px;
 }
 
 .header_subtitle {
   justify-self: right;
   align-self: center;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--main-font);
   font-size: 18px;
   font-weight: bold;
   line-height: 23.4px;
@@ -140,7 +138,7 @@ main {
   margin-block-start: 40px;
 }
 
-.first-question_container {
+.why-hard_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
@@ -149,7 +147,7 @@ main {
 
 .container_title {
   color: var(--container-title-color);
-  font-family: IBM Plex Mono;
+  font-family: var(--main-font);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -157,7 +155,7 @@ main {
 }
 
 .container-subtitle {
-  font-family: IBM Plex Mono;
+  font-family: var(--main-font);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -165,7 +163,7 @@ main {
 
 .container-info {
   color: var(--container-info-color);
-  font-family: IBM Plex Mono;
+  font-family: var(--main-font);
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -191,16 +189,16 @@ main {
   outline: 1px solid var(--container-info-color);
 }
 
-.first-question-answer_one {
+.why-hard_container_quest {
   grid-column: span 2;
 }
 
-.first-question-answer_two {
+.why-hard_container_dophamine {
   grid-column-start: 2;
   grid-column-end: 4;
 }
 
-.second-question_container {
+.concetration_container {
   margin-block-start: 80px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -209,28 +207,28 @@ main {
   column-gap: 20px;
 }
 
-.second-question-answer_one,
-.second-question-answer_two,
-.second-question-answer_three {
+.concetration_container-quest,
+.concetration_container-food,
+.concetration_container-gadget {
   grid-row-start: 2;
   grid-row-end: 3;
 }
 
-.third-question_container {
+.gold-fish_container {
   margin-block-start: 80px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 12px;
 }
 
-.third-question_container_list {
+.gold-fish_container-list {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   grid-column: 2/3;
 }
 
-.third-question_solution-list {
+.gold-fish_solution-list {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -239,7 +237,7 @@ main {
 .list-title {
   color: var(--accent-color);
   background-color: var(--bg-color);
-  font-family: IBM Plex Mono;
+  font-family: var(--main-font);
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -294,10 +292,20 @@ main {
   position: relative;
   display: grid;
   block-size: 100vh;
-  min-block-size: 727px;
+  min-block-size: 728px;
   grid-template-rows: 1fr min-content 1fr;
   margin-block-start: 80px;
   justify-content: center;
+}
+
+.footer-title {
+  color: var(--title-color);
+  font-family: var(--main-font);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  line-height: 82.5%;
+  letter-spacing: 0px;
+  font-weight: bold;
+  text-shadow: 4px 4px 0 var(--bg-color);
 }
 
 .footer-container {
@@ -305,7 +313,7 @@ main {
   grid-row: 2/3;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 772px) {
   .header {
     min-block-size: 984px;
   }
@@ -335,27 +343,27 @@ main {
     display: inline;
   }
 
-  .first-question_container {
+  .why-hard_container {
     column-gap: 37px;
     row-gap: 18px;
   }
 
-  .second-question-answer_one {
+  .concetration_container-quest {
     grid-column: 1/4;
     grid-row: 2/3;
   }
 
-  .second-question-answer_two {
+  .concetration_container-food {
     grid-column: 1/4;
     grid-row: 3/4;
   }
 
-  .second-question-answer_three {
+  .concetration_container-gadget {
     grid-column: 1/4;
     grid-row: 4/5;
   }
 
-  .third-question_container {
+  .gold-fish_container {
     column-gap: 20px;
   }
 
@@ -368,7 +376,11 @@ main {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 424px) {
+  .decorated::before {
+    top: -3px;
+  }
+
   .container-info span {
     display: block;
   }
@@ -385,8 +397,9 @@ main {
     min-block-size: 648px;
   }
 
-  .header_heading {
-    margin-inline-start: -5px;
+  .header-title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    margin-inline-start: 0px;
     margin-block-end: 25px;
   }
 
@@ -398,34 +411,34 @@ main {
     margin-block-start: 30px;
   }
 
-  .first-question_container {
+  .why-hard_container {
     grid-template-columns: auto;
   }
-  .first-question-answer_one {
+  .why-hard_container_quest {
     grid-column: 1/2;
     grid-row: 2/3;
   }
-  .first-question-answer_two {
+  .why-hard_container_dophamine {
     grid-column: 1/2;
     grid-row: 3/4;
   }
 
-  .second-question_container {
+  .concetration_container {
     margin-block-start: 52px;
     grid-template-columns: auto;
   }
 
-  .second-question-answer_one {
+  .concetration_container-quest {
     grid-column: 1/2;
     grid-row: 2/3;
   }
 
-  .second-question-answer_two {
+  .concetration_container-food {
     grid-column: 1/2;
     grid-row: 3/4;
   }
 
-  .second-question-answer_three {
+  .concetration_container-gadget {
     grid-column: 1/2;
     grid-row: 4/5;
   }
@@ -434,13 +447,13 @@ main {
     display: inline;
   }
 
-  .third-question_container {
+  .gold-fish_container {
     grid-template-columns: auto;
     margin-block-start: 53px;
     row-gap: 17px;
   }
 
-  .third-question_container_list {
+  .gold-fish_container-list {
     grid-column: 1/2;
   }
 
@@ -481,7 +494,11 @@ main {
   }
 
   .footer {
-    min-block-size: 647px;
-    margin-block-start: 46px;
+    min-block-size: 648px;
+    margin-block-start: 54px;
+  }
+
+  .footer-title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 }

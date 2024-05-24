@@ -11,4 +11,5 @@
   --container-info-color: #f1b2ce;
   --accent-background-image: url(../images/cover-image-dark.png);
   --accent-background-color: rgb(0, 0, 40);
+  --main-font: "IBM Plex Mono", sans-serif;
 }
